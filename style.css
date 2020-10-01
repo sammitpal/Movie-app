@@ -1,0 +1,90 @@
+*{
+    box-sizing: border-box;
+}
+#main{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+body{
+    margin: 0;
+    font-family: 'Baloo Bhai 2', cursive;
+    background-color: #272532;
+}
+header{
+    display: flex;
+    background-color: #373b69;
+    padding: 1rem;
+    justify-content: flex-end;
+}
+header input{
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    background: transparent;
+    border: 2px solid #fff;
+    color: white;
+    font-family: inherit
+}
+header input:focus{
+    outline: none;
+}
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.movie {
+    background-color: #373b69;
+    border-radius: 5px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    margin: 1rem;
+    width: 300px;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.movie img {
+    width: 100%;
+    height: 100%;
+}
+
+.movie-info {
+    color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem 1rem;
+    letter-spacing: 0.5px;
+}
+
+.movie-info h3 {
+    margin: 0;
+    max-width: 200px;
+
+}
+
+.movie-info span {
+    background-color: #22254b;
+    border-radius: 3px;
+    font-weight: bold;
+    padding: 0.25rem 0.5rem;
+}
+.overview{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    padding: 2rem;
+    transform: translateY(100%);
+    transition: transform 0.5s ease-in;
+    max-height: 100%;
+    overflow: auto;
+}
+
+.movie:hover .overview{
+    transform: translateY(0);
+}
